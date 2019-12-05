@@ -14,8 +14,8 @@ pipeline {
         NEWRELIC_API_KEY = credentials('newrelic-api-key')
     }
     stages {
-        stage('Foo') {
-            echo 'Hello world'
+        stage ('Foo') {
+            echo 'Hello'
         }
     }
 }
