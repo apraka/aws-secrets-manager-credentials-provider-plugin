@@ -10,6 +10,7 @@ buildPlugin(
   configurations: configurations
 )
 pipeline {
+    agent any
     environment {
         NEWRELIC_API_KEY = credentials('newrelic-api-key')
     }
