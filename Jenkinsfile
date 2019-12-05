@@ -9,3 +9,13 @@ buildPlugin(
   checkstyle: [run: true, archive: true],
   configurations: configurations
 )
+pipeline {
+    environment {
+        NEWRELIC_API_KEY = credentials('newrelic-api-key')
+    }
+    stages {
+        stage('Foo') {
+            echo 'Hello world'
+        }
+    }
+}
